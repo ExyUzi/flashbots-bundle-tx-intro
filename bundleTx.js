@@ -38,9 +38,6 @@ async function main() {
             signer: wallet
         },
     ];
-    // We sign the bundle
-    const signedTxBundle = await flashbotsProvider.signBundle(bundle);
-    console.log(signedTxBundle)
     // Send the bundle to the flashbotsProvider (to the next block (blockNumber +1))
     const res = await flashbotsProvider.sendBundle(bundle, blockNumber + 1);
     console.log(res);
